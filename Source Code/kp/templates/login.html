@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock title %}
+{% block css %} <link rel="stylesheet" href="/static/login.css"> {% endblock css %}
+{% block body %}
+    <div class="login_body">
+      <div class="login__form">
+        <form action="/action_page.php" method="post">
+          <div class="imgcontainer" style="font-size: 3.5rem;
+          color: #0a2890;">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <h2 class="login_text">Webmail Login</h2>
+
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input
+              type="text"
+              placeholder="Enter Username"
+              name="uname"
+              required
+            />
+
+            <label for="psw"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              required
+            />
+
+            <button class="form-btn" style="background-color: rgb(248, 188, 60);" type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember" />
+              Remember me
+            </label>
+          </div>
+
+          <div class="container" style="background-color: #f1f1f1">
+            <button type="button" class="form-btn cancelbtn">Cancel</button>
+            <span class="psw"><a class="btn btn-secondary" href="#">Forgot password?</a></span>
+          </div>
+        </form>
+      </div>
+      <div class="vl"></div>
+      <div class="hl"></div>
+      <div class="login__form">
+        <form action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <img src="/static/images/logo/upsida1.png" alt="Avatar" />
+          </div>
+          <h2 class="login_text">Office Login</h2>
+
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input
+              type="text"
+              placeholder="Enter Username"
+              name="uname"
+              required
+            />
+
+            <label for="psw"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              required
+            />
+
+            <button class="form-btn" type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember" />
+              Remember me
+            </label>
+          </div>
+
+          <div class="container" style="background-color: #f1f1f1">
+            <button type="button" class="form-btn cancelbtn">Cancel</button>
+            <span class="psw"><a class="btn btn-secondary" href="#">Forgot password?</a></span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+{% endblock body %}

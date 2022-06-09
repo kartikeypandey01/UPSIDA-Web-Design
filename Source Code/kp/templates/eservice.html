@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block title %}E-Services{% endblock title %}
+{% block css %} <link rel="stylesheet" href="/static/eservice.css"> {% endblock css %}
+{% block body %}
+<script src="/static/index.js"></script>
+ <nav class="navbar navbar-expand-lg navbar-light" id="subnav2">
+      <a class="navbar-brand btn" href="home" style="text-align: center; background-color: #a9d2ff;">Home&nbsp;<i class="fas fa-home" style="color:#3d4858;"></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#subnavbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span id="iconPlus"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="subnavbarNavDropdown">
+        <ul class="navbar-nav subnav">
+          <li class="nav-item dropdown">
+            <button class="btn nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              UPSIDA
+            </button>
+            <div class="dropdown-menu dropmenu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="https://eservices.onlineupsidc.com/Advertisement.aspx">Available Plot List in Nivesh Mitra</a>
+              <a class="dropdown-item" href="https://upsida.mjunction.in/">Available Plot in E-auction</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <button class="btn nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Disclosures Allottee Details
+            </button>
+            <div class="dropdown-menu dropmenu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="https://www.onlineupsidc.com/IndustrialAreas.aspx">Industrial Areas</a>
+              <a class="dropdown-item" href="https://eservices.onlineupsidc.com/VanvibhaagReport.aspx">Plantation</a>
+            </div>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="projects">Flagship Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://gis.onlineupsidc.com/">Service Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="eservice">Available Plots</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="eservice">Office Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="policies">Property Hub</a>
+          </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid" id="eserve">
+    <div class="row">
+    <div class="col-lg-6 col-12" id="formdiv">
+       <div class="card" id="form">
+        <div class="container  mb-4 d-flex">
+            <div class="form-card ">
+                <div class="form-card-body">
+                    <div class="image text-center"><img src="/static/images/logo/upsida1.png"  alt=""></div>
+                    <div class="d-flex flex-row"> <label class="radio mr-1"> <input type="radio" name="add" value="anz" checked> <span> <i class="fa fa-user"></i> UPSIDA user </span> </label> <label class="radio"> <input type="radio" name="add" value="add"> <span> <i class="fa fa-plus-circle"></i> Other Dept.</span> </label> </div>
+                    <h6 class="information mt-4">Login to UPSIDA.com</h6>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Username"> </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="input-group"> <input class="form-control" type="password" placeholder="Password"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="input-group"> <input class="form-control" type="text" placeholder="Captcha"> </div>
+                            </div>
+                        </div></div>
+                        <div class="image text-center"><img src="/static/images/logo/ghCaptcha.jpeg" alt=""></div>
+                    
+                    <div class=" d-flex flex-column text-center px-5 mt-3 mb-3"> <small class="agree-text">By Booking this appointment you agree to the</small> <a href="#" class="terms">Terms & Conditions</a> </div> <button class="btn  btn-primary btn-block confirm-button">Confirm</button>
+                </div>
+            </div>
+        </div>
+         </div>
+    </div>
+    <div class="col-lg-6 col-12">
+        <div class="serve-card" id="servelinks1">
+            <div class="title text-center"><p class="h4">Application Links</p> </div>
+        <div class="container group1">
+            <button class="      card"> <a  href="https://eservices.onlineupsidc.com/RegistrationLogistics.aspx">Application
+                Under Warehousing and Logistic</a></button>
+                <button class="      card"> <a  href="https://eservices.onlineupsidc.com/IAServices.aspx">Apply For Occupancy
+                Certificate</a></button>
+                <button class="      card"> <a href="https://eservices.onlineupsidc.com/IAServices.aspx" >Apply For Completion
+                Certificate</a></button>
+                <button class="      card"><a href="https://eservices.onlineupsidc.com/IAServices.aspx" >Apply For
+                Amalgamation of Plot</a></button>
+                <button class="      card"> <a href="https://eservices.onlineupsidc.com/IAServices.aspx" >Apply For Sub
+                Division of Plot</a></button>
+        </div>
+           </div>
+    
+    
+        <div class="serve-card" id="servelinks2">
+        <div class="title text-center"><p class="h4"> Additional Features</p></div>
+        <div class="container group2">
+            <button class="card "> <a  href="https://eservices.onlineupsidc.com/RegistrationLogistics.aspx">IA Service Tracker</a></button>
+                <button class="     card"> <a  href="https://eservices.onlineupsidc.com/IAServices.aspx">Land Allotment Tracker
+                Certificate</a></button>
+                <button class="     card"> <a href="https://eservices.onlineupsidc.com/IAServices.aspx" >Apply For RTI
+                Certificate</a></button>
+                <button class="     card"><a href="https://eservices.onlineupsidc.com/IAServices.aspx" >Submit Grievance</a></button>
+                <button class="     card"> <a href="https://eservices.onlineupsidc.com/IAServices.aspx" >Sell your Land
+                Division of Plot</a></button>
+        </div>
+           </div>
+    </div>
+</div>
+</div>
+
+{% endblock body %}

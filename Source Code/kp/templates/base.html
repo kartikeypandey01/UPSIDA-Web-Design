@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="/static/base.css">
+    <link rel="stylesheet" href="/static/index.css">
+    <title>{% block title %}{% endblock title %} | UPSIDA</title>
+    {% block css %}{% endblock css %}
+  </head>
+  <body id="body" class="body">
+<!--header-->
+
+<div class="header">
+ <nav class="navbar navbar-expand-sm navbar-light bg-light" id="topnav">
+    <a class="navbar-brand" href="home"><img src="/static/images/logo/upsida-logo-name.png" class="logo" alt="LOGO"></a>
+    <a class="navbar-brand" href="home"><img src="/static/images/logo/upsida1.png" class="logosmall" alt="LOGO"></a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="about">About</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="#">News</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true">
+            Contact US
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="">Head office</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">Regional/project office</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="">Divisional office</a>
+          </div>
+        </li>
+        
+      </ul>
+      <button class="btn my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal" id="searchpage"><i class='fas fa-search'></i></button>
+      <form class="form-inline my-2 my-md-0">
+        <a class="btn btn-success my-2 mx-2 my-sm-0" href="login" id="login">Log In</a>
+        <a class="btn btn-success my-2 mx-2 my-sm-0 profile" href="login" id="profile"><i class='fas fa-user-circle'></i></a>
+      </form></nav>
+    </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"  style="text-align: center; margin: auto;" id="exampleModalLabel">Search the whole page..</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" style="margin: 0 1em;">
+              <form action="\search" class="form-inline my-2 my-lg-0" style="margin: auto;">
+                
+                <input type="search" class="form-control sm-2" name="keys" placeholder="Type search query and hit enter..." style="width: 60%;">
+                <button type="submit" class="btn btn-primary mr-2"  id="modalsearch">Search</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="modalclose">Close</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--subnav-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="subnav">
+<a class="navbar-brand btn" href="home" style="text-align: center; background-color: #a9d2ff;">Home&nbsp;<i class="fas fa-home" style="color: #3d4858;"></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span id="iconPlus"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav subnav">
+          <li class="nav-item ">
+            <a class="nav-link" href="projects">Flagship Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://gis.onlineupsidc.com/">GIS &nbsp;<i class="fas fa-map-marker-alt"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="eservice">E-Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="policies">Policies</a>
+          </li>
+          <li class="nav-item dropdown" id="resource1">
+            <button class=" btn nav-link dropdown-toggle" href="resource" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Quick Resources
+            </button>
+            <div class="dropdown-menu dropmenu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="resource"><strong>Resource center</strong> </a>
+              <a class="dropdown-item" href="/">Industrial Area operating process</a>
+              <a class="dropdown-item" href="https://www.onlineupsidc.com/officeorder.aspx">Office Orders</a>
+              <a class="dropdown-item" href="https://www.onlineupsidc.com/operating_manual_upsidc.aspx">Operating Manual </a>
+              <a class="dropdown-item" href="https://www.onlineupsidc.com/building_23616.aspx">Document for approval of building plan</a>
+              <a class="dropdown-item" href="https://www.onlineupsidc.com/rate_list_245415.aspx">Present Rates</a>
+              <a class="dropdown-item" href="https://www.onlineupsidc.com/DevelopmentProcess.aspx">Development Process</a>
+              <a class="dropdown-item" href="https://www.onlineupsidc.com/conditions_tender.aspx">Conditions for tender</a>
+              <a class="dropdown-item" href="https://www.onlineupsidc.com/allotment_form.aspx">Allotment application form</a>
+              <a class="dropdown-item" href="https://www.onlineupsidc.com/servicelink_03032015.aspx">Services Rules</a>
+              <a class="dropdown-item" href="https://www.onlineupsidc.com/OfcUser_pdf/OfficeUser2.pdf">Ammendment In UPSIDA Land Development &amp; Building Regulation  2018</a>
+              <a class="dropdown-item" href="https://www.onlineupsidc.com/OfcUser_pdf/SECOND%20AMMENDMENT%20IN%20UPSIDA%20LAND%20DEVELOPMENT%20AND%20BUILDING%20REGULATION%202018.pdf">Second Ammendment In UPSIDA Land Development</a>
+            </div>
+          </li>
+          <li class="nav-item" id="resource2">
+            <a class="nav-link" href="resource">Resource Centre</a>
+          </li>
+          <li class="nav-item dropdown">
+            <button class="btn nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Industrial Info
+            </button>
+            <div class="dropdown-menu dropmenu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="https://www.onlineupsidc.com/IndustrialAreas.aspx">Industrial Areas</a>
+              <a class="dropdown-item" href="https://eservices.onlineupsidc.com/VanvibhaagReport.aspx">Plantation</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <button class="btn nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Available Plots
+            </button>
+            <div class="dropdown-menu dropmenu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="https://eservices.onlineupsidc.com/Advertisement.aspx">Available Plot List in Nivesh Mitra</a>
+              <a class="dropdown-item" href="https://upsida.mjunction.in/">Available Plot in E-auction</a>
+            </div>
+          </li>
+    </ul>
+  </div>
+</nav>
+<!--message-->
+<button class="message-toggle" data-toggle="modal" data-target="#messageModal" id="message">&nbsp; &nbsp; &nbsp;<i class="fas fa-bell"></i></button>
+<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+      <div class="modal-content" id="messageContent">
+        <div class="modal-header">
+          <h5 class="modal-title"  style="text-align: center; margin: auto;" id="exampleModalLabel">Message from UPSIDA</h5>
+          <button type="button" class="close" data-dismiss="modal" id="modalclose" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="margin: 0; padding: 0;">
+          <img src="/static/images/message/message1.png" width="100%" id="mess1" alt="">
+          <img src="/static/images/message/message 2.png" width="100%" id="mess2" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Dark mode-->
+  <button class="darkmode-toggle" onclick="darkmode()" id="darkMode">&nbsp; &nbsp; &nbsp;<span id="sunIcon"><i class="fas fa-sun"></i></span><span id="moonIcon"></span></button>
+<!--Quiick Access-->
+  <div class="quickaccess" id="quickAccess">
+    <button class="qa-toggle" id="QAtoggler" onclick="openNav()" data-toggle="qa-menu" data-target="#QuickAccessMenu" aria-controls="QuickAccessMenu" aria-expanded="false" aria-label="Toggle quickaccess">QUick Links<span id="qlBtnIcon" style="margin-left: 4px;"><i class="fas fa-chevron-circle-up"></i></span> 
+    </button>
+    <button class="qa-toggle" id="QAtoggler2" onclick="openNav()" data-toggle="qa-menu" data-target="#QuickAccessMenu" aria-controls="QuickAccessMenu" aria-expanded="false" aria-label="Toggle quickaccess"><span id="qlBtnIcon" style="margin-left: 4px;"><i class="fas fa-chevron-circle-up"></i></span> 
+    </button>
+    <div class="qa-menu" id="QuickAccessMenu">
+      
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <ul class="Quick-links">
+        <li class="quick-link-item">
+          <a class="quick-link" href="https://niveshmitra.up.nic.in/" id="quicklink1"><i class="fas fa-chevron-right" ></i>Apply for Online Services</a>
+        </li>
+        <li class="quick-link-item">
+          <a class="quick-link" href="http://eservices.onlineupsidc.com/Default.aspx" id="quicklink2"><i class="fas fa-chevron-right"></i>Track Application</a>
+        </li>
+        <li class="quick-link-item">
+          <a class="quick-link" href="https://www.onlineupsidc.com/pdf/Newsletter_june21.pdf" id="quicklink3"><i class="fas fa-chevron-right"></i>UPSIDA News Letter(Revised)</a>
+        </li>
+        <li class="quick-link-item">
+          <a class="quick-link" href="https://www.onlineupsidc.com/pdf/UPSIDAInformationGuide.pdf" id="quicklink4"><i class="fas fa-chevron-right"></i>Invester Guide</a>
+        </li>
+        <li class="quick-link-item">
+          <a class="quick-link" href="https://eservices.onlineupsidc.com/RegistrationLogistics.aspx" id="quicklink5"><i class="fas fa-chevron-right"></i>Application for warehousing and logistics</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+<!--backtotop-->
+<a class="btn btn-primary" id="backtotop" href="#"><i class="fas fa-chevron-up"></i></a>
+{% block body %}{% endblock body %}
+<!--footer-->
+<div class="footer" id="Footer">
+  <div class="row footrow" id="footdiv">
+    <div class="footdiv quick-links col-12 col-lg-6 col-xl-3"> 
+      <p class="footheads">Quick links</p>  
+      <ul>
+        <li><a href="https://niveshmitra.up.nic.in/">Apply for Online Services</a></li>
+        <li><a href="http://eservices.onlineupsidc.com/Default.aspx">Track Application</a></li>
+        <li><a href="https://www.onlineupsidc.com/pdf/Newsletter_june21.pdf">UPSIDA News Letter(Revised)</a></li>
+        <li><a href="https://www.onlineupsidc.com/pdf/UPSIDAInformationGuide.pdf">Invester GuideInvester Guide</a></li>
+        <li><a href="https://eservices.onlineupsidc.com/RegistrationLogistics.aspx">Application for warehousing and logistics</a></li>
+      </ul> 
+    </div>
+      <div class="footdiv resources col-12 col-lg-6 col-xl-3">
+        <p class="footheads">Resource Centre</p>  
+      <ul>
+        <li><a href="/">Industrial Area operating</a></li>
+        <li><a href="https://www.onlineupsidc.com/officeorder.aspx">Office Orders</a></li>
+        <li><a href="https://www.onlineupsidc.com/operating_manual_upsidc.aspx">Operating Manual</a></li>
+        <li><a href="https://www.onlineupsidc.com/building_23616.aspx">Document for approval of building plan</a></li>
+        <li><a href="https://www.onlineupsidc.com/rate_list_245415.aspx">Present Rates</a></li>
+        <li><a href="https://www.onlineupsidc.com/DevelopmentProcess.aspx">Development Process</a></li>
+        <li><a href="https://www.onlineupsidc.com/conditions_tender.aspx">Conditions for tender</a></li>
+        <li><a href="https://www.onlineupsidc.com/allotment_form.aspx">Allotment application form</a></li>
+        <li><a href="https://www.onlineupsidc.com/servicelink_03032015.aspx">Services Rules</a></li>
+        <li><a href="https://www.onlineupsidc.com/OfcUser_pdf/OfficeUser2.pdf">Ammendment In UPSIDA Land Development &amp; Building Regulation  2018</a></li>
+        <li><a href="https://www.onlineupsidc.com/OfcUser_pdf/SECOND%20AMMENDMENT%20IN%20UPSIDA%20LAND%20DEVELOPMENT%20AND%20BUILDING%20REGULATION%202018.pdf">Second Ammendment In UPSIDA Land Development</a></li>
+      </ul> 
+      </div>
+      <div class="footdiv links col-12 col-lg-6 col-xl-3">
+        <p class="footheads">Important Links</p>  
+        <ul>
+          <li><a href="https://etender.up.nic.in/nicgep/app">Tenders Uttar Pradesh</a></li>
+          <li><a href="https://up.gov.in/">Government Of Uttar Pradesh</a></li>
+          <li><a href="http://www.udyogbandhu.com/">Department of infrastructure and Industrial Development</a></li>
+        </ul></div>
+      <div class="footdiv news col-12 col-lg-6 col-xl-3">
+        <p class="footheads">UPSIDA News letters</p>  
+        <ul>
+          <li><a href="https://www.onlineupsidc.com/pdf/UPSIDA%20Newsletter%20Edition1%20July%202020%20V(1.0).pdf">News letter(Edition-1)</a></li>
+          <li><a href="https://www.onlineupsidc.com/pdf/Newsletter%20Edition-2,%206%20Sep%202020%20(V1).pdf">News letter(Edition-2)</a></li>
+        </ul></div>
+  </div>
+    <div class="row footrow">
+      <div class="copyright col-12 col-sm-6">
+        <p>© UPSIDA, U.P, India | All rights reserved.</p>
+      </div>
+      <div class="social col-12 col-sm-6">
+        <a href="https://www.facebook.com/UPSIDAGoUP"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/upsida"><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-google-plus-g"></i></a>
+      </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
